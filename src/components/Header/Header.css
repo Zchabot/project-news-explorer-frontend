@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-700.woff") format("woff");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0 -104px;
+  height: 80px;
+  position: relative;
+  border-bottom: 1px solid #d1d2d6;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.header__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 0 104px;
+}

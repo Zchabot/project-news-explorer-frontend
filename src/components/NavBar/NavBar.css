@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-500.woff") format("woff");
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin: 0 104px 0 0;
+  padding: 0;
+}
+
+.navBar__home {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  color: #fff;
+}
+
+.navBar__saved-articles {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0 0 0 34px;
+  color: #fff;
+}
+
+.navBar__sign-out {
+  height: 48px;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  padding: 0 15px 0 19px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 0 0 0 22px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  background-color: transparent;
+  color: #fff;
+}
