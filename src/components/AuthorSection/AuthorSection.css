@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+.author__section {
+  display: flex;
+  padding: 80px 104px;
+  margin: 0;
+  gap: 56px;
+}
+
+.author__image {
+  height: 464px;
+  width: 464px;
+  border-radius: 50%;
+}
+
+.author__about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 51px 0 0;
+  max-width: 600px;
+}
+
+.author__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+.author__description {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  padding: 0;
+}

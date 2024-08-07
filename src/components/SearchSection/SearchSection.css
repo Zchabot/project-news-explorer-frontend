@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-500.woff") format("woff");
+}
+
+.search__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/main-backround.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1440px;
+  margin: -80px 0 0;
+  padding: 80px 156px;
+  gap: 32px;
+}
+
+.search__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  line-height: 1.065;
+  font-weight: 400;
+  color: #fff;
+  margin: 80px 0 0;
+  padding: 0;
+  max-width: 608px;
+}
+
+.search__description {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  max-width: 608px;
+}
+
+.search__form {
+  display: flex;
+  width: 100%;
+  max-width: 608px;
+  margin: 56px 0 0;
+}
+
+.search__input {
+  background-color: #fff;
+  height: 64px;
+  border: 1px solid #d1d2d6;
+  border-radius: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 -168px 0 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #000;
+  padding: 0 192px 0 24px;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.search__button {
+  height: 64px;
+  width: 168px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0px 5px 15px 0px #0e1a3933;
+  background-color: #2f71e5;
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.search__button:hover {
+  background-color: #347eff;
+}
+
+.search__button:active {
+  background-color: #2a65cc;
+}

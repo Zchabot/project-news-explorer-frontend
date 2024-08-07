@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  margin: 0 -104px;
+  margin: 0;
   height: 80px;
   position: relative;
   border-bottom: 1px solid #d1d2d6;
@@ -23,6 +23,10 @@
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.2;
-  color: #fff;
   margin: 0 0 0 104px;
+  color: #fff;
+}
+
+.header__title_black {
+  color: #000;
 }

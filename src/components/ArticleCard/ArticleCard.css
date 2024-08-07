@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-500.woff") format("woff");
+}
+
+.card {
+  width: 400px;
+  height: 576px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card__keyword {
+  height: 40px;
+  padding: 8px 22px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.714;
+  box-sizing: border-box;
+}
+
+.card__keyword_hidden {
+  visibility: hidden;
+}
+
+.card__removal-notice {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 11px 26px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  box-shadow: 0px 10px 22px 0px #3b4a741a;
+  box-sizing: border-box;
+  transition: opacity 0.5s linear 0s;
+}
+
+.card__removal-notice_hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card__button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  background-image: url(../../assets/bookmark.svg);
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: background-image 0.5s linear 0s;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-image: url(../../assets/bookmark-hover.svg);
+}
+
+.card__button-saved {
+  background-image: url(../../assets/bookmark-marked.svg);
+}
+
+.card__button-saved:hover {
+  background-image: url(../../assets/bookmark-marked.svg);
+}
+
+.card__button-delete {
+  background-image: url(../../assets/trash.svg);
+}
+
+.card__button-delete:hover {
+  background-image: url(../../assets/trash-hover.svg);
+}
+
+.card__image {
+  width: 400px;
+  height: 272px;
+  float: left;
+  clear: none;
+}
+
+.card__info {
+  padding: 20px 24px 0;
+  margin: 0;
+  box-sizing: border-box;
+  float: left;
+  clear: none;
+}
+
+.card__date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #b6bcbf;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.card__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  padding: 0;
+  height: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card__description {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  margin: 0 0 18px;
+  padding: 0;
+  max-height: 110px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card__source {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.4px;
+  color: #b6bcbf;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}

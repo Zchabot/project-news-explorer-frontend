@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-400-regular.woff") format("woff");
+}
+
+.saved__title-section {
+  padding: 40px 104px 56px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.saved .saved__title {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+  color: rgba(26, 27, 34, 0.5);
+  padding: 0;
+  margin: 0;
+}
+.saved__info {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.13;
+  font-weight: 400;
+  color: #1a1b22;
+  max-width: 336px;
+  padding: 0;
+  margin: 0;
+}
+
+.saved__keywords {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+  color: #1a1b22;
+  padding: 0;
+  margin: 2px 0 0;
+}
+
+.saved__keywords_span {
+  font-weight: 700;
+}
