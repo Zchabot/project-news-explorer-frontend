@@ -8,25 +8,137 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   height: 80px;
   position: relative;
   border-bottom: 1px solid #d1d2d6;
-  box-sizing: border-box;
   background-color: transparent;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  width: 100%;
+  position: relative;
 }
 
 .header__title {
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.2;
-  margin: 0 0 0 104px;
+  margin: 0;
   color: #fff;
 }
 
 .header__title_black {
   color: #000;
+}
+
+.header__menu-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url(../../assets/menu-button-white.svg);
+  transition: opacity 0.5s linear 0s;
+  cursor: pointer;
+  visibility: hidden;
+  position: absolute;
+}
+
+.header__menu-button:hover {
+  opacity: 0.5;
+}
+
+.header__menu-button-black {
+  background-image: url(../../assets/menu-button-black.svg);
+}
+
+.header__home-link {
+  width: 68px;
+  margin: 0;
+}
+
+.header__saved-articles-link {
+  width: 178px;
+  margin: 0 0 0 2px;
+}
+
+@media screen and (max-width: 863px) {
+  .header {
+    height: 66px;
+  }
+
+  .header__content {
+    max-width: 720px;
+    padding: 0 16px;
+  }
+
+  .header__home-link {
+    width: 60px;
+  }
+
+  .header__saved-articles-link {
+    width: 160px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    height: 56px;
+  }
+
+  .header__content {
+    max-width: 320px;
+  }
+
+  .header__content_hidden {
+    visibility: hidden;
+  }
+
+  .header__title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .header__menu-button {
+    visibility: visible;
+    position: relative;
+  }
+
+  .header__menu-button_hidden {
+    visibility: hidden;
+  }
+
+  .header_mobile-nav {
+    background-color: #1a1b22;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header__content_mobile-nav {
+    max-width: 600px;
+  }
+
+  .header__title_mobile-nav {
+    color: #fff;
+  }
 }

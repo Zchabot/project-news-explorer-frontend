@@ -4,8 +4,8 @@ import "./Cards.css";
 function Cards({ cards }) {
   return (
     <ul className="cards">
-      {cards.map((item) => {
-        return <ArticleCard key={item._id} item={item} />;
+      {cards.map((item, index) => {
+        return <ArticleCard key={index} item={item} />;
       })}
     </ul>
   );

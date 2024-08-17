@@ -1,30 +1,24 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./ResultsSection.css";
-import { initialCards } from "../../utils/contstants";
-import Cards from "../Cards/Cards";
+import AppContext from "../../contexts/AppContext";
+import Preloader from "../Preloader/Preloader";
+import Results from "../Results/Results";
+import NoResults from "../NoResults/NoResults";
+import SearchError from "../SearchError/SearchError";
 
 function ResultsSection() {
-  const [buttonText, setButtonText] = useState("Show more");
+  const { resultsHidden } = useContext(AppContext);
 
-  const firstThreeCards = [initialCards[0], initialCards[1], initialCards[2]];
-
-  const cards = buttonText === "Show more" ? firstThreeCards : initialCards;
-
-  const setCards = () => {
-    if (buttonText === "Show more") {
-      setButtonText("Show less");
-    } else {
-      setButtonText("Show more");
-    }
-  };
+  const resultsSectionClass = `results__section ${
+    resultsHidden ? "results__section_hidden" : ""
+  }`;
 
   return (
-    <section className="results__section">
-      <h2 className="results__title">Search Results</h2>
-      <Cards cards={cards} />
-      <button type="button" className="results__show-more" onClick={setCards}>
-        {buttonText}
-      </button>
+    <section className={resultsSectionClass}>
+      <Preloader />
+      <Results />
+      <NoResults />
+      <SearchError />
     </section>
   );
 }

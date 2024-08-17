@@ -1,0 +1,78 @@
+.mobile-nav__container {
+  background-color: #1a1b22;
+  height: 230px;
+  align-self: flex-start;
+  padding: 56px 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  display: flex;
+  position: relative;
+}
+
+.mobile-nav__close {
+  top: 16px;
+  right: 16px;
+  height: 24px;
+  width: 24px;
+  padding: 5.59px;
+  background-image: url("../../assets/close.svg");
+}
+
+.mobile-nav__navbar {
+  flex-direction: column;
+  gap: 22px;
+  margin: 16px 0 0;
+  visibility: visible;
+  position: relative;
+  width: 100%;
+}
+
+.mobile-nav__home {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  height: 56px;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+.mobile-nav__home.active {
+  border-bottom: none;
+  padding-top: 0;
+}
+
+.mobile-nav__home:hover {
+  color: #fff;
+}
+
+.mobile-nav__saved-articles {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  height: 56px;
+  visibility: visible;
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+.mobile-nav__saved-articles.active {
+  border-bottom: none;
+}
+
+.mobile-nav__button {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 56px;
+  border-radius: 28px;
+  color: #fff;
+  border-color: #fff;
+  box-sizing: border-box;
+}
+
+.mobile-nav__hidden-element {
+  visibility: hidden;
+  position: absolute;
+}

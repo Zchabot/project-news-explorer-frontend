@@ -1,23 +1,35 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
+import AppContext from "../../contexts/AppContext";
 import "./ArticleCard.css";
-import SavedArticles from "../SavedArticles/SavedArticles";
 
 function ArticleCard({ item }) {
   const [isSaved, setIsSaved] = useState(false);
-  const [hoverDelete, setHoverDelete] = useState(false);
+  const [hoverButton, setHoverButton] = useState(false);
   const location = useLocation().pathname;
+  const {
+    isLoggedIn,
+    handleSaveItem,
+    handleDeleteItem,
+    savedItems,
+    searchResults,
+  } = useContext(AppContext);
 
   const saveCard = () => {
-    if (isSaved === false) {
-      setIsSaved(true);
+    if (isLoggedIn) {
+      if (isSaved === false) {
+        setIsSaved(true);
+        handleSaveItem(item);
+      } else {
+        return;
+      }
     } else {
-      setIsSaved(false);
+      return;
     }
   };
 
   const deleteCard = () => {
-    console.log("deleted");
+    handleDeleteItem(item);
   };
 
   const buttonClass = () => {
@@ -28,44 +40,69 @@ function ArticleCard({ item }) {
   };
 
   const onMouseEnter = () => {
-    if (location === "/saved-articles") {
-      setHoverDelete(true);
+    if (!isLoggedIn || location === "/saved-articles") {
+      setHoverButton(true);
     }
   };
 
   const onMouseLeave = () => {
-    if (location === "/saved-articles") {
-      setHoverDelete(false);
+    if (!isLoggedIn || location === "/saved-articles") {
+      setHoverButton(false);
     }
   };
 
-  const onclick = location === "/saved-articles" ? deleteCard : saveCard;
+  const onClick = location === "/saved-articles" ? deleteCard : saveCard;
 
-  const removalNoticeClass = `card__removal-notice ${
-    hoverDelete === false ? "card__removal-notice_hidden" : ""
+  const buttonMessageClass = `card__button-message ${
+    hoverButton === false ? "card__button-message_hidden" : ""
   }`;
+
+  const buttonMessage = `${
+    location === "/saved-articles"
+      ? "Remove from saved"
+      : "Sign in to save articles"
+  }`;
+
   const keywordClass = `card__keyword ${
     location !== "/saved-articles" ? "card__keyword_hidden" : ""
   }`;
 
+  useEffect(() => {
+    const matchingItems = savedItems.filter((savedItem) => {
+      return savedItem.title === item.title && savedItem.source === item.source;
+    });
+    if (matchingItems.length > 0) {
+      setIsSaved(true);
+    } else {
+      setIsSaved(false);
+    }
+  }, [searchResults, savedItems]);
+
   return (
     <li className="card">
-      <p className={keywordClass}>Nature</p>
-      <p className={removalNoticeClass}>Remove from saved</p>
+      <p className={keywordClass}>{item.keyword}</p>
+      <p className={buttonMessageClass}>{buttonMessage}</p>
       <button
         type="button"
         className={buttonClass()}
-        onClick={onclick}
+        onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       />
-      <img className="card__image" src={item.urlToImage} alt={item.title} />
-      <div className="card__info">
-        <p className="card__date">{item.publishedAt}</p>
-        <h2 className="card__title">{item.title}</h2>
-        <p className="card__description">{item.description}</p>
-        <p className="card__source">{item.source}</p>
-      </div>
+      <Link
+        href={item.link}
+        target="blank"
+        rel="noopener noreferrer"
+        className="card__link"
+      >
+        <img className="card__image" src={item.image} alt={item.title} />
+        <div className="card__info">
+          <p className="card__date">{item.date}</p>
+          <h2 className="card__title">{item.title}</h2>
+          <p className="card__description">{item.text}</p>
+          <p className="card__source">{item.source}</p>
+        </div>
+      </Link>
     </li>
   );
 }

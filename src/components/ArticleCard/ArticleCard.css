@@ -30,6 +30,15 @@
   src: url("../../vendor/fonts/roboto-500.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/source-sans-pro-latin-400-normal.woff")
+    format("woff");
+}
+
 .card {
   width: 400px;
   height: 576px;
@@ -40,6 +49,10 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+}
+
+.card__link {
+  color: inherit;
 }
 
 .card__keyword {
@@ -56,13 +69,23 @@
   font-size: 14px;
   line-height: 1.714;
   box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 144px;
 }
 
 .card__keyword_hidden {
   visibility: hidden;
 }
 
-.card__removal-notice {
+.card__keyword:hover {
+  max-width: none;
+  z-index: 999;
+  margin: -5px -5px;
+}
+
+.card__button-message {
   display: flex;
   align-items: center;
   height: 40px;
@@ -80,9 +103,10 @@
   box-shadow: 0px 10px 22px 0px #3b4a741a;
   box-sizing: border-box;
   transition: opacity 0.5s linear 0s;
+  z-index: 999;
 }
 
-.card__removal-notice_hidden {
+.card__button-message_hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -142,7 +166,7 @@
 }
 
 .card__date {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
@@ -161,7 +185,10 @@
   height: 60px;
   text-overflow: ellipsis;
   overflow: hidden;
-  box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .card__description {
@@ -175,6 +202,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
   box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .card__source {
@@ -189,4 +220,118 @@
   position: absolute;
   bottom: 24px;
   left: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: noWrap;
+  max-width: 352px;
+}
+
+@media screen and (max-width: 863px) {
+  .card {
+    width: 224px;
+    height: 420px;
+    border-radius: 16px;
+  }
+
+  .card__image {
+    width: 224px;
+    height: 150px;
+  }
+
+  .card__button {
+    top: 8px;
+    right: 8px;
+  }
+
+  .card__button-message {
+    top: 71px;
+    right: 32.733px;
+  }
+
+  .card__keyword {
+    top: 8px;
+    left: 8px;
+  }
+
+  .card__keyword:hover {
+    margin: -3px -3px;
+  }
+
+  .card__info {
+    padding: 16px 16px 0;
+  }
+
+  .card__title {
+    font-size: 22px;
+    padding-bottom: 8px;
+    margin: 0;
+    height: 72px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .card__description {
+    margin: 2px 0 12px;
+    max-height: 88px;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .card__source {
+    bottom: 16px;
+    left: 16px;
+    max-width: 192px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 288px;
+    height: 440px;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 196px;
+  }
+
+  .card__button {
+    top: 16px;
+    right: 16px;
+  }
+
+  .card__button-message {
+    top: 94px;
+    right: 64.733px;
+  }
+
+  .card__keyword {
+    top: 16px;
+    left: 16px;
+  }
+
+  .card__keyword:hover {
+    margin: -3px -3px;
+  }
+
+  .card__date {
+    margin-bottom: 10px;
+  }
+
+  .card__title {
+    height: 48px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    padding-bottom: 4px;
+  }
+
+  .card__description {
+    margin: 10px 0 8px;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .card__source {
+    max-width: 256px;
+  }
 }

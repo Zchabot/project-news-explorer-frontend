@@ -8,13 +8,24 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 32px 104px 26px;
+  padding: 0;
   margin: 0 0 26px 0;
   box-sizing: border-box;
   background-color: #fff;
+  height: 80px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 24px 26px;
+  margin: 0;
+  max-width: 1280px;
+  box-sizing: border-box;
 }
 
 .footer__copyright {
@@ -115,4 +126,47 @@
 
 .footer__facebook:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 863px) {
+  .footer {
+    height: 64px;
+  }
+
+  .footer__content {
+    padding: 0 16px 18px;
+    max-width: 720px;
+  }
+
+  .footer__site-links {
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__content {
+    padding: 20px 16px 22px;
+    max-width: 320px;
+    height: 176px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .footer__nav {
+    justify-content: space-between;
+    gap: unset;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer__site-links {
+    flex-direction: column;
+    gap: unset;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .footer__social-links {
+    margin: 0;
+  }
 }
