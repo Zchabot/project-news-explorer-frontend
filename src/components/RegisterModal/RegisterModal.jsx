@@ -51,7 +51,7 @@ function RegisterModal({ isOpen, handleRegistration }) {
         errors={errors.password}
         labelText="Password"
         inputName="password"
-        type="text"
+        type="password"
         placeholder="Enter password"
         values={values.password}
         handleChange={handleChange}
