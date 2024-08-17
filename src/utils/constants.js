@@ -6,5 +6,5 @@ export const dateToday = new Date(Date.now()).toISOString().substring(0, 10);
 
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://api.wtwrzc.port0.org"
-    : "http://localhost:3001";
+    ? "https://api.news-explorer-zc.port0.org"
+    : "http://localhost:3002";
