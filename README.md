@@ -21,4 +21,10 @@ News Expolrer is and application where users can search news articles based on k
 
 ## Backend
 
-https://news-explorer-zc.port0.org
+https://github.com/Zchabot/project-news-explorer-backend
+
+https://api.news-explorer-zc.port0.org
+
+## Link
+
+https://.news-explorer-zc.port0.org
