@@ -1,4 +1,4 @@
-.results__section {
+.main__results-section {
   margin: 0;
   padding: 0;
   max-width: 1440px;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.results__section_hidden {
+.main__results-section_hidden {
   position: absolute;
   visibility: hidden;
 }

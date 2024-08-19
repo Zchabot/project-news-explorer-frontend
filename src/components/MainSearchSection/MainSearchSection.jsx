@@ -1,9 +1,9 @@
 import { useEffect, useContext, useState } from "react";
-import "./SearchSection.css";
+import "./MainSearchSection.css";
 import { useFormAndValidation } from "../../utils/hooks/useFormAndValidation";
 import AppContext from "../../contexts/AppContext";
 
-function SearchSection({ handleSearch }) {
+function MainSearchSection({ handleSearch }) {
   const { values, handleChange, resetForm } = useFormAndValidation();
   const { submitSuccess, setResultsHidden, searchResults } =
     useContext(AppContext);
@@ -41,35 +41,37 @@ function SearchSection({ handleSearch }) {
   }, []);
 
   return (
-    <div className="search__section">
-      <div className="search__section-content">
-        <h2 className="search__title">What&apos;s going on in the world?</h2>
-        <p className="search__description">
+    <section className="main__search-section">
+      <div className="main__search-section-content">
+        <h2 className="main__search-title">
+          What&apos;s going on in the world?
+        </h2>
+        <p className="main__search-description">
           Find the latest news on any topic and save them in your personal
           account.
         </p>
-        <form className="search__form" onSubmit={onFormSubmit}>
-          <p className="search__no-keyword">{`${
+        <form className="main__search-form" onSubmit={onFormSubmit}>
+          <p className="main__search-no-keyword">{`${
             emptyField ? "Please enter a keyword" : ""
           }`}</p>
           <input
             id="search-input"
             type="text"
             placeholder="Enter topic"
-            className="search__input"
+            className="main__search-input"
             value={`${values.search ? `${values.search}` : ""}`}
             name="search"
             onChange={handleChange}
             autoComplete="on"
             maxLength={"500" || ""}
           />
-          <button type="submit" className="search__button">
+          <button type="submit" className="main__search-button">
             Search
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default SearchSection;
+export default MainSearchSection;

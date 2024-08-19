@@ -1,26 +1,26 @@
 import { useContext } from "react";
-import "./ResultsSection.css";
+import "./MainResultsSection.css";
 import AppContext from "../../contexts/AppContext";
 import Preloader from "../Preloader/Preloader";
 import Results from "../Results/Results";
 import NoResults from "../NoResults/NoResults";
 import SearchError from "../SearchError/SearchError";
 
-function ResultsSection() {
+function MainResultsSection() {
   const { resultsHidden } = useContext(AppContext);
 
-  const resultsSectionClass = `results__section ${
-    resultsHidden ? "results__section_hidden" : ""
+  const resultsSectionClass = `main__results-section ${
+    resultsHidden ? "main__results-section_hidden" : ""
   }`;
 
   return (
-    <div className={resultsSectionClass}>
+    <section className={resultsSectionClass}>
       <Preloader />
       <Results />
       <NoResults />
       <SearchError />
-    </div>
+    </section>
   );
 }
 
-export default ResultsSection;
+export default MainResultsSection;

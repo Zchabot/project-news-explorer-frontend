@@ -14,14 +14,14 @@
   src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
 }
 
-.author__section {
+.main__author-section {
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
 }
 
-.author__section-content {
+.main__author-section-content {
   display: flex;
   padding: 80px 24px;
   margin: 0;
@@ -31,13 +31,13 @@
   max-width: 1280px;
 }
 
-.author__image {
+.main__author-image {
   height: 464px;
   width: 464px;
   border-radius: 50%;
 }
 
-.author__about {
+.main__author-about {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -45,7 +45,7 @@
   max-width: 600px;
 }
 
-.author__title {
+.main__author-title {
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
@@ -54,7 +54,7 @@
   padding: 0;
 }
 
-.author__description {
+.main__author-description {
   margin: 0;
   padding: 0;
   display: flex;
@@ -62,7 +62,7 @@
   gap: 24px;
 }
 
-.author__description-paragraph {
+.main__author-description-paragraph {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -72,52 +72,52 @@
 }
 
 @media screen and (max-width: 863px) {
-  .author__section-content {
+  .main__author-section-content {
     max-width: 720px;
     padding: 40px 16px;
     gap: 32px;
   }
 
-  .author__image {
+  .main__author-image {
     height: 232px;
     width: 232px;
     margin: 21px 0;
   }
 
-  .author__about {
+  .main__author-about {
     padding-top: 0;
     gap: 16px;
     max-width: 424px;
   }
 
-  .author__title {
+  .main__author-title {
     font-size: 30px;
     line-height: 1.33;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .author__section-content {
+  .main__author-section-content {
     max-width: 320px;
     padding: 32px 16px 128px;
     gap: 24px;
     flex-direction: column;
   }
 
-  .author__image {
+  .main__author-image {
     height: 272px;
     width: 272px;
     margin: 0;
     align-self: center;
   }
 
-  .author__about {
+  .main__author-about {
     padding-top: 0;
     gap: 16px;
     max-width: 288px;
   }
 
-  .author__title {
+  .main__author-title {
     font-size: 30px;
     line-height: 1.33;
   }

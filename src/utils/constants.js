@@ -4,9 +4,7 @@ export const dateLastWeek = new Date(Date.now() - 7 * 24 * 3600 * 1000)
   .substring(0, 10);
 export const dateToday = new Date(Date.now()).toISOString().substring(0, 10);
 
-/*export const baseUrl =
+export const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://api.news-explorer-zc.port0.org"
-    : "http://localhost:3002"; */
-
-export const baseUrl = "https://api.news-explorer-zc.port0.org";
+    : "http://localhost:3002";

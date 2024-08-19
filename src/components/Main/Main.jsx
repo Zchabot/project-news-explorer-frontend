@@ -1,19 +1,13 @@
-import SearchSection from "../SearchSection/SearchSection";
-import ResultsSection from "../ResultsSection/ResultsSection";
-import AuthorSection from "../AuthorSection/AuthorSection";
+import MainSearchSection from "../MainSearchSection/MainSearchSection";
+import MainResultsSection from "../MainResultsSection/MainResultsSection";
+import MainAuthorSection from "../MainAuthorSection/MainAuthorSection";
 
 function Main({ handleSearch }) {
   return (
-    <main className="main">
-      <section className="main__search-section">
-        <SearchSection handleSearch={handleSearch} />
-      </section>
-      <section className="main__results-section">
-        <ResultsSection />
-      </section>
-      <section className="main__author-section">
-        <AuthorSection />
-      </section>
+    <main>
+      <MainSearchSection handleSearch={handleSearch} />
+      <MainResultsSection />
+      <MainAuthorSection />
     </main>
   );
 }

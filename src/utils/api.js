@@ -12,7 +12,7 @@ export function request(url, options) {
 }
 
 function getItems(token) {
-  return request(`${baseUrl}/items`, {
+  return request(`${baseUrl}/articles`, {
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ function getUserInfo(token) {
 }
 
 function addItem(item, token) {
-  return request(`${baseUrl}/items`, {
+  return request(`${baseUrl}/articles`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function addItem(item, token) {
 }
 
 function deleteItem(id, token) {
-  return request(`${baseUrl}/items/${id}`, {
+  return request(`${baseUrl}/articles/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
