@@ -18,7 +18,6 @@ function ArticleCard({ item }) {
   const saveCard = () => {
     if (isLoggedIn) {
       if (isSaved === false) {
-        setIsSaved(true);
         handleSaveItem(item);
       } else {
         return;
@@ -90,7 +89,7 @@ function ArticleCard({ item }) {
         onMouseLeave={onMouseLeave}
       />
       <Link
-        href={item.link}
+        to={item.link}
         target="blank"
         rel="noopener noreferrer"
         className="card__link"

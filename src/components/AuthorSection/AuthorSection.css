@@ -55,6 +55,14 @@
 }
 
 .author__description {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.author__description-paragraph {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;

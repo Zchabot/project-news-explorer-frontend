@@ -14,12 +14,12 @@ function ResultsSection() {
   }`;
 
   return (
-    <section className={resultsSectionClass}>
+    <div className={resultsSectionClass}>
       <Preloader />
       <Results />
       <NoResults />
       <SearchError />
-    </section>
+    </div>
   );
 }
 

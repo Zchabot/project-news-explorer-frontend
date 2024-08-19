@@ -10,8 +10,7 @@
     align-self: flex-end;
     border-radius: 12px 12px 0 0;
     padding: 16px 16px 0;
-    margin: -56px;
-    height: 100vh;
+    height: calc(100% - 56px);
     border: none;
     max-width: 100%;
   }

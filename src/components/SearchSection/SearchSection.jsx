@@ -41,7 +41,7 @@ function SearchSection({ handleSearch }) {
   }, []);
 
   return (
-    <section className="search__section">
+    <div className="search__section">
       <div className="search__section-content">
         <h2 className="search__title">What&apos;s going on in the world?</h2>
         <p className="search__description">
@@ -68,7 +68,7 @@ function SearchSection({ handleSearch }) {
           </button>
         </form>
       </div>
-    </section>
+    </div>
   );
 }
 

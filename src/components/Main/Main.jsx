@@ -5,9 +5,15 @@ import AuthorSection from "../AuthorSection/AuthorSection";
 function Main({ handleSearch }) {
   return (
     <main className="main">
-      <SearchSection handleSearch={handleSearch} />
-      <ResultsSection />
-      <AuthorSection />
+      <section className="main__search-section">
+        <SearchSection handleSearch={handleSearch} />
+      </section>
+      <section className="main__results-section">
+        <ResultsSection />
+      </section>
+      <section className="main__author-section">
+        <AuthorSection />
+      </section>
     </main>
   );
 }
