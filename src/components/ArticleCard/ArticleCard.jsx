@@ -24,7 +24,7 @@ function ArticleCard({ item }) {
         return;
       }
     } else {
-      setActiveModal("sign-in");
+      setActiveModal("sign-up");
     }
   };
 
