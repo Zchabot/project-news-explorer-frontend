@@ -28,8 +28,20 @@ function ArticleCard({ item }) {
     }
   };
 
+  const newItem = savedItems.filter((savedItem) => {
+    return savedItem.title === item.title && savedItem.source === item.source;
+  })[0];
+
+  const getDeletedItem = () => {
+    if ("_id" in item) {
+      return item;
+    } else {
+      return newItem;
+    }
+  };
+
   const deleteCard = () => {
-    handleDeleteItem(item);
+    handleDeleteItem(getDeletedItem());
   };
 
   const buttonClass = () => {
@@ -51,7 +63,19 @@ function ArticleCard({ item }) {
     }
   };
 
-  const onClick = location === "/saved-articles" ? deleteCard : saveCard;
+  const checkIsSaved = () => {
+    const matchingItems = savedItems.filter((savedItem) => {
+      return savedItem.title === item.title && savedItem.source === item.source;
+    });
+    if (matchingItems.length > 0) {
+      setIsSaved(true);
+    } else {
+      setIsSaved(false);
+    }
+  };
+
+  const onClick =
+    location === "/saved-articles" || isSaved ? deleteCard : saveCard;
 
   const buttonMessageClass = `card__button-message ${
     hoverButton === false ? "card__button-message_hidden" : ""
@@ -68,14 +92,7 @@ function ArticleCard({ item }) {
   }`;
 
   useEffect(() => {
-    const matchingItems = savedItems.filter((savedItem) => {
-      return savedItem.title === item.title && savedItem.source === item.source;
-    });
-    if (matchingItems.length > 0) {
-      setIsSaved(true);
-    } else {
-      setIsSaved(false);
-    }
+    checkIsSaved();
   }, [searchResults, savedItems]);
 
   return (

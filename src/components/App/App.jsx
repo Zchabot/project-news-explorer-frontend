@@ -127,6 +127,10 @@ function App() {
   };
 
   const handleDeleteItem = (deletedItem) => {
+    const itemSaved = () => {
+      setSaving(false);
+    };
+    setSaving(true);
     const token = getToken();
     const makeRequest = () => {
       return deleteItem(deletedItem._id, token).then(() => {
@@ -136,7 +140,7 @@ function App() {
         setSavedItems(filteredItems);
       });
     };
-    handleSubmit(makeRequest);
+    handleSubmit(makeRequest, "", itemSaved);
   };
 
   const handleLogin = ({ email, password }, form) => {
