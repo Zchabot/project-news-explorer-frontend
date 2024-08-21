@@ -3,10 +3,12 @@ import AppContext from "../../contexts/AppContext";
 import "./Preloader.css";
 
 function Preloader() {
-  const { isLoading } = useContext(AppContext);
+  const { isLoading, searching } = useContext(AppContext);
 
   const preloaderContainerClass = `preloader__container ${
-    isLoading === false ? "preloader__container_hidden" : ""
+    isLoading === false || searching === false
+      ? "preloader__container_hidden"
+      : ""
   }`;
 
   return (

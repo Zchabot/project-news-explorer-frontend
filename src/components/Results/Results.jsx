@@ -10,6 +10,7 @@ function Results() {
     formError,
     resultsNumber,
     setResultsNumber,
+    saving,
   } = useContext(AppContext);
 
   const cards = searchResults.filter((item, index) => {
@@ -23,7 +24,9 @@ function Results() {
   };
 
   const resultsClass = `results__container ${
-    isLoading || searchResults.length === 0 || "search" in formError
+    (saving === false && isLoading) ||
+    searchResults.length === 0 ||
+    "search" in formError
       ? "results__container_hidden"
       : ""
   }`;

@@ -27,6 +27,8 @@ function App() {
   const [userData, setUserData] = useState({ email: "empty", name: "empty" });
   const [savedItems, setSavedItems] = useState([]);
   const [formError, setFormError] = useState({});
+  const [searching, setSearching] = useState(false);
+  const [saving, setSaving] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -81,11 +83,15 @@ function App() {
   }
 
   const handleSearch = (keyword, form) => {
+    const stopPreloader = () => {
+      setSearching(false);
+    };
+    setSearching(true);
     const makeRequest = () => {
       return getResults(keyword).then((res) => {
         const filteredResults = res.articles
           .filter((item) => {
-            return item.title !== "[Removed]";
+            return item.title !== "[Removed]" && item.urlToImage;
           })
           .map((item) => {
             return {
@@ -100,21 +106,24 @@ function App() {
           });
         setSearchResults(filteredResults);
         setResultsNumber(3);
-        console.log(searchResults);
         localStorage.setItem("search_results", JSON.stringify(filteredResults));
       });
     };
-    handleSubmit(makeRequest, form);
+    handleSubmit(makeRequest, form, stopPreloader);
   };
 
   const handleSaveItem = (newItem) => {
+    const itemSaved = () => {
+      setSaving(false);
+    };
+    setSaving(true);
     const token = getToken();
     const makeRequest = () => {
       return addItem(newItem, token).then((res) => {
         setSavedItems([res, ...savedItems]);
       });
     };
-    handleSubmit(makeRequest);
+    handleSubmit(makeRequest, "", itemSaved);
   };
 
   const handleDeleteItem = (deletedItem) => {
@@ -231,6 +240,8 @@ function App() {
         setFormError,
         resultsNumber,
         setResultsNumber,
+        searching,
+        saving,
       }}
     >
       <div className="page">

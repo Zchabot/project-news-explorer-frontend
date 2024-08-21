@@ -13,6 +13,7 @@ function ArticleCard({ item }) {
     handleDeleteItem,
     savedItems,
     searchResults,
+    setActiveModal,
   } = useContext(AppContext);
 
   const saveCard = () => {
@@ -23,7 +24,7 @@ function ArticleCard({ item }) {
         return;
       }
     } else {
-      return;
+      setActiveModal("sign-in");
     }
   };
 
