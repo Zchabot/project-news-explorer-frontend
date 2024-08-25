@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-slab-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+.main__author-section {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main__author-section-content {
+  display: flex;
+  padding: 80px 24px;
+  margin: 0;
+  box-sizing: border-box;
+  gap: 56px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.main__author-image {
+  height: 464px;
+  width: 464px;
+  border-radius: 50%;
+}
+
+.main__author-about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 51px 0 0;
+  max-width: 600px;
+}
+
+.main__author-title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+.main__author-description {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main__author-description-paragraph {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 863px) {
+  .main__author-section-content {
+    max-width: 720px;
+    padding: 40px 16px;
+    gap: 32px;
+  }
+
+  .main__author-image {
+    height: 232px;
+    width: 232px;
+    margin: 21px 0;
+  }
+
+  .main__author-about {
+    padding-top: 0;
+    gap: 16px;
+    max-width: 424px;
+  }
+
+  .main__author-title {
+    font-size: 30px;
+    line-height: 1.33;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__author-section-content {
+    max-width: 320px;
+    padding: 32px 16px 128px;
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  .main__author-image {
+    height: 272px;
+    width: 272px;
+    margin: 0;
+    align-self: center;
+  }
+
+  .main__author-about {
+    padding-top: 0;
+    gap: 16px;
+    max-width: 288px;
+  }
+
+  .main__author-title {
+    font-size: 30px;
+    line-height: 1.33;
+  }
+}

@@ -1,0 +1,12 @@
+.main__results-section {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__results-section_hidden {
+  position: absolute;
+  visibility: hidden;
+}

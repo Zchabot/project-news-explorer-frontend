@@ -1,0 +1,30 @@
+.modal__content_type_form-modal {
+  padding: 34px 36px 28px;
+  max-width: 430px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .modal__content_type_form-modal {
+    align-self: flex-end;
+    border-radius: 12px 12px 0 0;
+    padding: 16px 16px 0;
+    height: calc(100% - 56px);
+    border: none;
+    max-width: 100%;
+  }
+
+  .modal_type_form-modal {
+    background-color: transparent;
+  }
+
+  .modal__close_type_form-modal {
+    background-image: url("../../assets/close.svg");
+    padding: 5.29px 5.59px;
+    height: 24px;
+    width: 24px;
+    top: -40px;
+    right: 16px;
+  }
+}

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/inter-400-regular.woff") format("woff");
+}
+
+.input__label {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.21;
+  color: #2f71e5;
+  position: relative;
+}
+
+.input__element {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #000;
+  margin: 9px 0 31px;
+  padding: 0 0 10px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  height: 14px;
+}
+
+.input__error {
+  color: #ff0000;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.21;
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 356px;
+}
+
+@media screen and (max-width: 600px) {
+  .input__element {
+    margin: 8px 0 30px;
+  }
+
+  .input__error {
+    max-width: 288px;
+  }
+}

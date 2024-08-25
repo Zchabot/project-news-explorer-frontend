@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear, max-width 0,
+    5s linear 0s;
+  opacity: 0;
+  z-index: 999;
+  max-width: 0;
+}
+
+.modal_opened {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+  max-width: none;
+}
+
+.modal__close {
+  position: absolute;
+  background-image: url("../../assets/close.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.5s linear 0s;
+  top: -46px;
+  right: -46px;
+}
+
+.modal__close:hover {
+  opacity: 0.6;
+}
+
+.modal__content {
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  border: solid 1px #000;
+  border-radius: 16px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 600px) {
+  .modal__close {
+    top: 16px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../assets/close-black.svg");
+  }
+}

@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../vendor/fonts/roboto-400-regular.woff") format("woff");
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 26px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 80px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 24px 26px;
+  margin: 0;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+
+.footer__copyright {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.33;
+  color: #b6bcbf;
+  margin: 0;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 40px;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+}
+
+.footer__site-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.footer__home {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  color: #1a1b22;
+  transition: opacity 0.5s linear 0s;
+  cursor: pointer;
+}
+
+.footer__home:hover {
+  opacity: 0.6;
+}
+
+.footer__triple-ten {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  color: #1a1b22;
+  transition: opacity 0.5s linear 0s;
+  cursor: pointer;
+}
+
+.footer__triple-ten:hover {
+  opacity: 0.6;
+}
+
+.footer__social-links {
+  margin: 0 0 2px 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.footer__github {
+  height: 24px;
+  width: 24px;
+  background-image: url(../../assets/github.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.5s linear 0s;
+}
+
+.footer__github:hover {
+  opacity: 0.6;
+}
+
+.footer__facebook {
+  height: 24px;
+  width: 24px;
+  background-image: url(../../assets/facebook.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.5s linear 0s;
+}
+
+.footer__facebook:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 863px) {
+  .footer {
+    height: 64px;
+  }
+
+  .footer__content {
+    padding: 0 16px 18px;
+    max-width: 720px;
+  }
+
+  .footer__site-links {
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__content {
+    padding: 20px 16px 22px;
+    max-width: 320px;
+    height: 176px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .footer__nav {
+    justify-content: space-between;
+    gap: unset;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer__site-links {
+    flex-direction: column;
+    gap: unset;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .footer__social-links {
+    margin: 0;
+  }
+}
