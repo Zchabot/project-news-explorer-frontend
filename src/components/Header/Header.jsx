@@ -20,7 +20,7 @@ function Header() {
   const headerContentClass = `header__content ${
     activeModal === "mobile-nav"
       ? "header__content_mobile-nav"
-      : activeModal === "sign-in" || activeModal === "register"
+      : activeModal === "sign-in" || activeModal === "sign-up"
       ? "header__content_hidden"
       : ""
   }`;
@@ -34,7 +34,7 @@ function Header() {
   } ${
     activeModal === "mobile-nav" ||
     activeModal === "sign-in" ||
-    activeModal === "register"
+    activeModal === "sign-up"
       ? "header__menu-button_hidden"
       : ""
   }`;

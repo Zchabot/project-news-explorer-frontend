@@ -27,4 +27,20 @@ https://api.news-explorer-zc.port0.org
 
 ## Link
 
-https://.news-explorer-zc.port0.org
+https://news-explorer-zc.port0.org
+
+## Images
+
+![alt text](./src/assets/demo/home-logged-out.png)
+![alt text](./src/assets/demo/home-logged-in.png)
+![alt text](./src/assets/demo/no-results.png)
+![alt text](./src/assets/demo/results.png)
+![alt text](./src/assets/demo/author-section.png)
+![alt text](./src/assets/demo/modal-1.png)
+![alt text](./src/assets/demo/modal-2.png)
+![alt text](./src/assets/demo/saved-articles.png)
+![alt text](./src/assets/demo/mobile-1.png)
+![alt text](./src/assets/demo/mobile-2.png)
+![alt text](./src/assets/demo/mobile-3.png)
+![alt text](./src/assets/demo/mobile-4.png)
+![alt text](./src/assets/demo/mobile-5.png)
