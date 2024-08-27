@@ -1,5 +1,5 @@
 import "./MainAuthorSection.css";
-import authorImage from "../../assets/author-image.jpg";
+import authorImage from "../../assets/author-image.png";
 
 function MainAuthorSection() {
   return (
