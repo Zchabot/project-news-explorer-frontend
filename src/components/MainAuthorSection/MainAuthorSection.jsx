@@ -10,12 +10,12 @@ function MainAuthorSection() {
           <h2 className="main__author-title">About the author</h2>
           <div className="main__author-description"></div>
           <p className="main__author-description-paragraph">
-            This block describes the project author. Here you should indicate
-            your name, what you do, and which development technologies you know.{" "}
+            My name is Zachary Chabot. I am a full stack software engineer with
+            experience building web applications using a MERN stack.
           </p>
           <p className="main__author-description-paragraph">
-            You can also talk about your experience with TripleTen, what you
-            learned there, and how you can help potential customers.
+            At Triple Ten I used technologies including HTML5, CSS, Javascript,
+            JSX, React.js, Node.js, Express.js, and MongoDB.
           </p>
         </div>
       </div>
